@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Validated Login Form</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1 class=label>User login</h1>
+		<form class="login_form" name="form" onsubmit="return validated()">
+			<button  type="menu"> <a style="text-decoration: none" href="http://google.com"> Google でログイン </a>   </button>
+			<div class="font">電話番号</div>
+			<input type="text"  id ="phone" placeholder="Ex:09012346789" onkeyup="checkPhone()">
+			<div class="error-message invalid-feedback" id="phone-error"></div>
+			<div class="font">メールアドレス</div>
+			<input type="text" id ="email" placeholder="Ex:login@mail.co" onkeyup="checkEmail()">
+			<div class="error-message invalid-feedback" id="email-error"></div>
+			<div class="font font2">パスワード</div>
+			<input type="password" name="password">
+			<div id="pass_error">Please fill up your Password</div>
+			<button type="submit">Login</button>
+		</form>
+	</div>	
+	<script src="checkform_regex.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+</body>
+</html>
